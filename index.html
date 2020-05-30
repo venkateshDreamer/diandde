@@ -62,20 +62,34 @@
     <div class="site-wrapper">
       <div class="col-md-12 nopadding">
         <div class="header-section dark-dropdowns style4 pin-style">
+
           <div class="container">
             <div class="mod-menu">
               <div class="row">
-                <div class="col-sm-2"> <a href="index.html" title="" class="logo style-2 mar-4"> <img
-                      src="images/logo/logo-dark.png" alt=""> </a> </div>
+               
+               
+               
+                <div class="col-sm-2 logo-con"> 
+                                <button class="navbar-icon collapsed" id="openbtn" >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar ic1"></span>
+                    <span class="icon-bar ic2"></span>
+                    <span class="icon-bar ic3"></span>
+                </button>
+                
+                <a href="index.html" title="" class="logo style-2 mar-4">
+                
+                     
+                      <img src="images/logo/logo-dark.png" alt=""> </a> </div>
                 <div class="col-sm-10">
                   <div class="main-nav">
                     <div id="menu" class="collapse">
                       <ul class="nav navbar-nav">
                         <li class="right active"> <a href="index.html">Home</a></li>
-                        <li> <a href="page-about4.html">About</a></span></li>
-                        <li> <a href="page-services3.html">Services</a></span></li>
-                        <li> <a href="page-team-creative.html">Team</a></span></li>
-                        <li> <a href="page-contact.html">Contact</a></span></li>
+                        <li> <a href="page-about4.html">About</a></li>
+                        <li> <a href="page-services3.html">Services</a></li>
+                        <li> <a href="page-team-creative.html">Team</a></li>
+                        <li> <a href="page-contact.html">Contact</a></li>
                       </ul>
                     </div>
                   </div>
@@ -103,7 +117,7 @@
                   data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"
                   data-title="Number One" data-description="">
                   <!-- MAIN IMAGE -->
-                  <img src="http://via.placeholder.com/2000x1300" alt="" data-bgposition="center center"
+                  <img src="images/bg.jpg" alt="" data-bgposition="center center"
                     data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg"
                     data-no-retina>
 
@@ -158,7 +172,7 @@
                   data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"
                   data-title="Number One" data-description="">
                   <!-- MAIN IMAGE -->
-                  <img src="http://via.placeholder.com/2000x1300" alt="" data-bgposition="center center"
+                  <img src="images/bg.jpg" alt="" data-bgposition="center center"
                     data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg"
                     data-no-retina>
 
@@ -213,7 +227,7 @@
                   data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"
                   data-title="Number One" data-description="">
                   <!-- MAIN IMAGE -->
-                  <img src="http://via.placeholder.com/2000x1300" alt="" data-bgposition="center center"
+                  <img src="images/bg.jpg" alt="" data-bgposition="center center"
                     data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg"
                     data-no-retina>
 
@@ -983,6 +997,29 @@
         </div>
       </section>
       <div class="clearfix"></div>
+      
+      
+      <div class="sidemenu hide">
+          <div class="overlay"></div>
+          
+          <div class="menu">
+                      <ul class="nav navbar-nav">
+                        <li class="right active"> <a href="index.html">Home</a></li>
+                        <li> <a href="page-about4.html">About</a></li>
+                        <li> <a href="page-services3.html">Services</a></li>
+                        <li> <a href="page-team-creative.html">Team</a></li>
+                        <li> <a href="page-contact.html">Contact</a></li>
+                      </ul>
+                <button class="navbar-icon close-btn" id="closebtn" >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar ic1"></span>
+                    <span class="icon-bar ic2"></span>
+                    <span class="icon-bar ic3"></span>
+                </button>
+                    
+        </div>
+      </div>
+      
 
       <a href="#" class="scrollup"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
       <!-- end scroll to top of the page-->
@@ -1007,6 +1044,7 @@
     var tpj = jQuery;
     var revapi112;
     tpj(document).ready(function () {
+        
       if (tpj("#rev_slider_112_1").revolution == undefined) {
         revslider_showDoubleJqueryError("#rev_slider_112_1");
       } else {
@@ -1145,6 +1183,29 @@
         $('.parallax').parallaxBackground();
       })(jQuery);
   </script>
+  
+  <script>
+    
+      $(document).ready(function () {
+
+    
+
+    $("#openbtn").click(function () {
+        
+        $(".sidemenu").removeClass("hide");
+    });
+          
+    $("#closebtn").click(function () {
+        
+        $(".sidemenu").addClass("hide");
+    });
+
+
+    
+    
+});
+    </script>
+  
   <script src="js/tabs/js/responsive-tabs.min.js"></script>
   <script src="js/cubeportfolio/jquery.cubeportfolio.min.js"></script>
   <script src="js/cubeportfolio/mosaic-flat.js"></script>
